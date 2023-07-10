@@ -8,7 +8,7 @@ import java.time.LocalDateTime;
 
 
 @Entity
-public class Author {
+public class AuthorEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -33,9 +33,9 @@ public class Author {
 
     private LocalDateTime createdAt = LocalDateTime.now();
 
-    public Author() {}
+    public AuthorEntity() {}
 
-    public Author(Long id, String name, String email, String description, LocalDateTime createdAt) {
+    public AuthorEntity(Long id, String name, String email, String description, LocalDateTime createdAt) {
         this.id = id;
         this.name = name;
         this.email = email;
