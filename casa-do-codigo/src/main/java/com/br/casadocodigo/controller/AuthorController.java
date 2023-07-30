@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.net.URI;
+
 @RestController
 @RequestMapping("/authors")
 public class AuthorController {
@@ -23,7 +25,7 @@ public class AuthorController {
     @PostMapping
     public ResponseEntity<?> create(@RequestBody AuthorRequest authorRequest) {
         Author author = authorService.create();
-        return ResponseEntity.ok(author);
+        return ResponseEntity.created(URI.create("in progress...")).build();
     }
 
 }

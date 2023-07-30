@@ -6,7 +6,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.time.LocalDateTime;
 
-
 @Entity
 public class AuthorEntity {
 
@@ -14,21 +13,10 @@ public class AuthorEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    /**
-     * Required attribute
-     */
     private String name;
 
-    /**
-     * Required attribute
-     * Email formatted
-     */
     private String email;
 
-    /**
-     * Required attribute
-     * Max-length: 400
-     */
     private String description;
 
     private LocalDateTime createdAt = LocalDateTime.now();
@@ -82,4 +70,5 @@ public class AuthorEntity {
     public void setCreatedAt(LocalDateTime createdAt) {
         this.createdAt = createdAt;
     }
+
 }
